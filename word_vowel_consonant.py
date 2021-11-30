@@ -11,9 +11,15 @@
 #Step 1: Ask user to input a sentence
 def getSentence ():
     user_input_ = input ("Enter your sentence: ")
-    return user_input_
-#Step 2: Count number of words, store, display
-#Step 2: Count number of vowels and consonants, display
+#Step 2: Count number of words, store
+    words = user_input_.split()
+    number_words = len (words)
+    return user_input_, number_words
+#Display
+def display(number_words_):
+    print (f"The number of words in the sentence is {number_words_}")
+#Step 2: Count number of vowels and consonants
     #list vowels and consonants
 
-user_input = getSentence()
+user_input, numberOfWords = getSentence()
+display (numberOfWords)
