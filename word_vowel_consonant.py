@@ -19,12 +19,15 @@ def getSentence ():
     vowels = 0
     consonants =0
     for i in user_input_:
-        if(i == 'a'or i == 'e'or i == 'i'or i == 'o'or i == 'u' or
-            i == 'A'or i == 'E'or i == 'I'or i == 'O'or i == 'U' ):
-           vowels=vowels+1 #vowel is incremented by 1
+        if(i == 'a'or i == 'e'or i == 'i'or i == 'o'or i == 'u' or #lower case vowel
+            i == 'A'or i == 'E'or i == 'I'or i == 'O'or i == 'U' ): #upper case vowel
+            vowels=vowels+1 #vowel is incremented by 1
+        else: 
+            consonants= consonants +1 #consonant is incremented by 1
 #Display
     print (f"The number of words in the sentence is {number_words}")
     print (f"The number of vowels in the sentence is {vowels}")
+    print (f"The number of consonants in the sentence is {consonants} ")
 
 getSentence()
 
