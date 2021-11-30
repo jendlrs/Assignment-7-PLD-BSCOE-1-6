@@ -14,14 +14,17 @@ def getSentence ():
 #Step 2: Count number of words, store
     words = user_input_.split()
     number_words = len (words)
-    return user_input_, number_words
     #Step 3: Count number of vowels and consonants
     #add global variable for consonant and vowel
     vowels = 0
     consonants =0
+    for i in user_input_:
+        if(i == 'a'or i == 'e'or i == 'i'or i == 'o'or i == 'u' or
+            i == 'A'or i == 'E'or i == 'I'or i == 'O'or i == 'U' ):
+           vowels=vowels+1 #vowel is incremented by 1
+#Display
+    print (f"The number of words in the sentence is {number_words}")
+    print (f"The number of vowels in the sentence is {vowels}")
 
-def display(number_words_):
-    print (f"The number of words in the sentence is {number_words_}")
+getSentence()
 
-user_input, numberOfWords = getSentence()
-display (numberOfWords)
