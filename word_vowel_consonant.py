@@ -24,6 +24,8 @@ def getSentence ():
             vowels=vowels+1 #vowel is incremented by 1
         else: 
             consonants= consonants +1 #consonant is incremented by 1
+            if i == " ":
+                consonants= consonants -1
 #Display
     print (f"The number of words in the sentence is {number_words}")
     print (f"The number of vowels in the sentence is {vowels}")
