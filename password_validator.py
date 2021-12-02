@@ -27,14 +27,15 @@ def test(passwordA):
             lowercase = lowercase +1
         elif (i>='A' and i<='Z'):
             uppercase = uppercase +1
-#Step 3: Put condition for a. password must have greater than 15 letters
+
+    letters = uppercase + lowercase
+    #Step 3: Put condition for a. password must have greater than 15 letters
+    if letters >15:
+        print ("Your assword is Valid")
+
 #Step 4: Put condition for b. Have at least one capital letter
 #Step 5: Put condition for c. Have at least one number
 #Step 6: Put condition for d. Have atleast one special i
-#display overall
-    letters = uppercase + lowercase
-    print (letters)
-
 
 password = getPassword()
 test (password)
