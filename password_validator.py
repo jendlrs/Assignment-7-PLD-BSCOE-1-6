@@ -11,6 +11,9 @@
 print ("\nWelcome to Password Validator")
 name = input ("\nWhat is your name? ")
 print (f"\nHi {name}! This program will evaluate your password if it is valid or not.")
+print ("\nHere are the following criteria:") 
+print ("\nA. Greater than 15 letters \nB. Have at least one capital letter\nC. Have at least one number\nD. Have at least one special character (!@#$%^&*()_+ etc.)")
+
 
 #Step 1: Ask password from user
 def getPassword():
