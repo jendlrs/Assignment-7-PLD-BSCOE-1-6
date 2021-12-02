@@ -11,7 +11,7 @@ name= input("\nWelcome! What is your name? ")
 print (f"\nHi {name}! This program will look into your sentence. It will help you count words, vowels, and consonants.\n")
 #Step 1: Ask user to input a sentence
 def getSentence ():
-    user_input_ = input ("To continue, please Enter your sentence below.\n-->")
+    user_input_ = input ("\033[33mTo continue, please Enter your sentence below.\n--> \033[0m")
 #Step 2: Count number of words, store
     words = user_input_.split()
     number_words = len (words)
@@ -26,14 +26,14 @@ def getSentence ():
             vowels=vowels+1 #vowel is incremented by 1
         else: 
             consonants= consonants +1 #consonant is incremented by 1
-            if (i == " " or i == ".") or (i== "!" or i == ",") or (i== "?" or i== "-") or (i== "'" or ";") or (i== ":" or i== "/"):
+            if (i == " " or i == ".") or (i== "!" or i == ",") or (i== "?" or i== "-") or (i== "'" or i==";") or (i== ":" or i == "/"):
                 consonants= consonants -1
             #It is to minus spaces and most commonly used punctuation marks in the sentence. 
 #Display
     
-    print (f"\nThe number of words in the sentence is {number_words}")
-    print (f"The number of vowels in the sentence is {vowels}")
-    print (f"The number of consonants in the sentence is {consonants} \n")
+    print (f"\nThe number of words in the sentence is \033[1m{number_words}\033[0m")
+    print (f"The number of vowels in the sentence is \033[1m{vowels}\033[0m")
+    print (f"The number of consonants in the sentence is \033[1m{consonants}\033[0m\n")
 
 getSentence()
 
