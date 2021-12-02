@@ -29,11 +29,13 @@ def test(passwordA):
             uppercase = uppercase +1
 
     letters = uppercase + lowercase
-    #Step 3: Put condition for a. password must have greater than 15 letters
-    if letters >15:
+    #Step 3: Put condition for a. greater than 15 letters;
+    #Step 4: Put condition for b. Have at least one capital letter
+    if letters >15 and uppercase >=1:
         print ("Your assword is Valid")
+    else:
+        print ("Invalid password")
 
-#Step 4: Put condition for b. Have at least one capital letter
 #Step 5: Put condition for c. Have at least one number
 #Step 6: Put condition for d. Have atleast one special i
 
