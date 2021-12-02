@@ -23,6 +23,8 @@ def test(passwordA):
     lowercase =0 
     uppercase = 0
     digit = 0
+    specialchar =0 
+
     for i in passwordA:
         if (i>='a' and i<='z'): #counting the letters in password
             lowercase = lowercase +1
@@ -30,17 +32,17 @@ def test(passwordA):
             uppercase = uppercase +1
         elif i.isdigit ():
             digit = digit +1 
+        else:
+            specialchar = specialchar +1
 
     letters = uppercase + lowercase
     
 #Step 3: Conditions for the password to be valid
-         #a              #b                #c
-    if letters >15 and uppercase >=1 and digit >=1:
-        print ("Your assword is Valid")
+         #a              #b                #c             #d
+    if letters >15 and uppercase >=1 and digit >=1 and specialchar >=1:
+        print ("Your password is Valid")
     else:
         print ("Invalid password")
-
-
 
 password = getPassword()
 test (password)
