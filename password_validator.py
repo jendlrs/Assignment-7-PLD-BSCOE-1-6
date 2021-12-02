@@ -8,11 +8,15 @@
 #ex.
 #input: P@ssw0rd+P@ssw0rd
 #ouput: Valid
-print ("\nWelcome to Password Validator")
+print ("\n\033[33mWelcome to Password Validator!\033[0m")
 name = input ("\nWhat is your name? ")
-print (f"\nHi {name}! This program will evaluate your password if it is valid or not.")
+print (f"\nHi \033[33m{name}!\033[0m This program will evaluate your password if it is \033[32mvalid\033[0m or \033[91mnot\033[0m.")
+
 print ("\nHere are the following criteria:") 
-print ("\nA. Greater than 15 letters \nB. Have at least one capital letter\nC. Have at least one number\nD. Have at least one special character (!@#$%^&*()_+ etc.)")
+print ("\n\033[1mA.\033[0m \033[4mGreater than 15 letters\033[0m")
+print("\033[1mB.\033[0m Have at least \033[4mone capital letter\033[0m")
+print("\033[1mC.\033[0m Have at least \033[4mone number\033[0m")
+print("\033[1mD.\033[0m Have at least \033[4mone special character\033[0m (!@#$%^&*()_+ etc.)")
 
 
 #Step 1: Ask password from user
@@ -44,17 +48,17 @@ def test(passwordA):
 #Step 3: Conditions for the password to be valid
          #a              #b                #c             #d
     if letters >15 and uppercase >=1 and digit >=1 and specialchar >=1:
-        print ("\nYour password is VALID\n")
+        print ("\nYour password is \033[32mVALID\033[0m\n")
     elif letters <=15 and uppercase >=1 and digit >=1 and specialchar >=1:
-        print ("\nYour password is INVALID. Make sure that it has more than 15 letters.\n")
+        print ("\nYour password is \033[91mINVALID.\033[0m Make sure that it has more than 15 letters.\n")
     elif letters >15 and uppercase == 0 and digit >=1 and specialchar >=1:
-        print ("\nYour password is INVALID. Make sure that it has at least one capital letter.\n")
+        print ("\nYour password is \033[91mINVALID.\033[0m Make sure that it has at least one capital letter.\n")
     elif letters >15 and uppercase >=1 and digit == 0 and specialchar >=1:
-        print ("\nYour password is INVALID. Make sure that it has at least one number.\n")
+        print ("\nYour password is \033[91mINVALID.\033[0m Make sure that it has at least one number.\n")
     elif letters >15 and uppercase >=1 and digit >=1 and specialchar == 0:
-        print ("\nYour password is INVALID. Make sure that it has at least one special character.\n")
+        print ("\nYour password is \033[91mINVALID.\033[0m Make sure that it has at least one special character.\n")
     else:
-        print ("\nYour password is INVALID.\nMake sure that your password meets the following criteria:\n")
+        print ("\nYour password is \033[91mINVALID.\033[0m\nMake sure that your password meets the following criteria:\n")
         print ("A. Greater than 15 letters\nB. Have at least one capital letter\nC. Have at least one number\nD. Have at least one special character (!@#$%^&*()_+ etc.)\n")
 
 password = getPassword()
