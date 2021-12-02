@@ -26,8 +26,9 @@ def getSentence ():
             vowels=vowels+1 #vowel is incremented by 1
         else: 
             consonants= consonants +1 #consonant is incremented by 1
-            if i == " ":
+            if (i == " " or i == ".") or (i== "!" or i == ",") or (i== "?" or i== "-") or (i== "'" or ";") or (i== ":" or i== "/"):
                 consonants= consonants -1
+            #It is to minus spaces and most commonly used punctuation marks in the sentence. 
 #Display
     
     print (f"\nThe number of words in the sentence is {number_words}")
