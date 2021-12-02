@@ -17,17 +17,24 @@ def getPassword():
 
 #Step 2: Loop each through each character of input
 def test(passwordA):
-    #global variables:
-    letters =0 
+
+#Variables for initial numbers:
+
+    lowercase =0 
+    uppercase = 0
     for i in passwordA:
-        if (i>='a' and i<='z'): #condition for letters
-            letters = letters +1
-        print (letters)
+        if (i>='a' and i<='z'): #counting the letters in password
+            lowercase = lowercase +1
+        elif (i>='A' and i<='Z'):
+            uppercase = uppercase +1
 #Step 3: Put condition for a. password must have greater than 15 letters
 #Step 4: Put condition for b. Have at least one capital letter
 #Step 5: Put condition for c. Have at least one number
 #Step 6: Put condition for d. Have atleast one special i
 #display overall
+    letters = uppercase + lowercase
+    print (letters)
+
 
 password = getPassword()
 test (password)
