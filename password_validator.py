@@ -17,7 +17,7 @@ print ("\nA. Greater than 15 letters \nB. Have at least one capital letter\nC. H
 
 #Step 1: Ask password from user
 def getPassword():
-    password_= input("\nPlease enter your password below\n--> ")
+    password_= input("\nTo continue, please enter your password below.\n--> ")
     return password_
 
 #Step 2: Loop each through each character of input
@@ -44,9 +44,11 @@ def test(passwordA):
 #Step 3: Conditions for the password to be valid
          #a              #b                #c             #d
     if letters >15 and uppercase >=1 and digit >=1 and specialchar >=1:
-        print ("Your password is Valid")
+        print ("\nYour password is VALID\n")
+    elif letters <=15 and digit >=1 and specialchar >=1:
+        print ("\nYour password is INVALID. Make sure that your it has greater than 15 letters.\n")
     else:
-        print ("Invalid password")
+        print ("\nInvalid password\n")
 
 password = getPassword()
 test (password)
