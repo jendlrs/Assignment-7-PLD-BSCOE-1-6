@@ -8,18 +8,19 @@
 #ex.
 #input: P@ssw0rd+P@ssw0rd
 #ouput: Valid
-
+print ("\nWelcome to Password Validator")
+name = input ("\nWhat is your name? ")
+print (f"\nHi {name}! This program will evaluate your password if it is valid or not.")
 
 #Step 1: Ask password from user
 def getPassword():
-    password_= input("Please enter your password: ")
+    password_= input("\nPlease enter your password below\n--> ")
     return password_
 
 #Step 2: Loop each through each character of input
 def test(passwordA):
 
 #Variables for initial numbers:
-
     lowercase =0 
     uppercase = 0
     digit = 0
@@ -35,7 +36,7 @@ def test(passwordA):
         else:
             specialchar = specialchar +1
 
-    letters = uppercase + lowercase
+    letters = uppercase + lowercase   #(for total letters)
     
 #Step 3: Conditions for the password to be valid
          #a              #b                #c             #d
