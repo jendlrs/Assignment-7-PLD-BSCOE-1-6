@@ -22,11 +22,15 @@ def test(passwordA):
 
     lowercase =0 
     uppercase = 0
+    digit = 0
     for i in passwordA:
         if (i>='a' and i<='z'): #counting the letters in password
             lowercase = lowercase +1
         elif (i>='A' and i<='Z'):
             uppercase = uppercase +1
+        elif i.isdigit ():
+            digit = digit +1 
+            print (digit)
 
     letters = uppercase + lowercase
     #Step 3: Put condition for a. greater than 15 letters;
