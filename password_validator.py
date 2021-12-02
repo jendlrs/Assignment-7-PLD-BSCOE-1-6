@@ -11,9 +11,15 @@
 
 
 #Step 1: Ask password from user
+def getPassword():
+    password_= input("Please enter your password: ")
+    return password_
+
 #Step 2: Loop each through each character of input
 #Step 3: Put condition for a. password must have greater than 15 letters
 #Step 4: Put condition for b. Have at least one capital letter
 #Step 5: Put condition for c. Have at least one number
 #Step 6: Put condition for d. Have atleast one special i
 #display overall
+
+password = getPassword()
