@@ -54,7 +54,8 @@ def test(passwordA):
     elif letters >15 and uppercase >=1 and digit >=1 and specialchar == 0:
         print ("\nYour password is INVALID. Make sure that it has at least one special character.\n")
     else:
-        print ("\nInvalid password\n")
+        print ("\nYour password is INVALID.\nMake sure that your password meets the following criteria:\n")
+        print ("A. Greater than 15 letters\nB. Have at least one capital letter\nC. Have at least one number\nD. Have at least one special character (!@#$%^&*()_+ etc.)\n")
 
 password = getPassword()
 test (password)
